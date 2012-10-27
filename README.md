@@ -1,4 +1,4 @@
 strider-python
 ==============
 
-Python/Django support for Strider Continuous Deployment
+Python/Pyramid/Django support for Strider Continuous Deployment
