@@ -15,15 +15,6 @@ module.exports = function(ctx, cb) {
 
   ctx.addDetectionRule({
     filename:"setup.py",
-    exists:true,
-    language:"python",
-    framework:null,
-    prepare:CREATE_VIRTUAL_ENV + VIRTUAL_PYTHON + " setup.py develop",
-    test:VIRTUAL_PYTHON + " setup.py test",
-  })
-
-  ctx.addDetectionRule({
-    filename:"setup.py",
     grep:/pyramid/i,
     language:"python",
     framework:"pyramid",
@@ -39,6 +30,16 @@ module.exports = function(ctx, cb) {
     prepare:CREATE_VIRTUAL_ENV + VIRTUAL_PYTHON + " setup.py develop",
     test:VIRTUAL_PYTHON + " manage.py test",
   })
+
+  ctx.addDetectionRule({
+    filename:"setup.py",
+    exists:true,
+    language:"python",
+    framework:null,
+    prepare:CREATE_VIRTUAL_ENV + VIRTUAL_PYTHON + " setup.py develop",
+    test:VIRTUAL_PYTHON + " setup.py test",
+  })
+
 
   console.log("strider-python extension loaded")
   cb(null, null)
