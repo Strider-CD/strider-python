@@ -18,7 +18,7 @@ module.exports = function(ctx, cb) {
     grep:/pyramid/i,
     language:"python",
     framework:"pyramid",
-    prepare:CREATE_VIRTUAL_ENV + VIRTUAL_PYTHON + " setup.py develop",
+    prepare:CREATE_VIRTUAL_ENV,
     test:VIRTUAL_PYTHON + " setup.py test",
   })
 
@@ -27,7 +27,7 @@ module.exports = function(ctx, cb) {
     grep:/django/i,
     language:"python",
     framework:"django",
-    prepare:CREATE_VIRTUAL_ENV + VIRTUAL_PYTHON + " setup.py develop",
+    prepare:CREATE_VIRTUAL_ENV,
     test:VIRTUAL_PYTHON + " manage.py test",
   })
 
@@ -36,7 +36,7 @@ module.exports = function(ctx, cb) {
     exists:true,
     language:"python",
     framework:null,
-    prepare:CREATE_VIRTUAL_ENV + VIRTUAL_PYTHON + " setup.py develop",
+    prepare:CREATE_VIRTUAL_ENV,
     test:VIRTUAL_PYTHON + " setup.py test",
   })
 
