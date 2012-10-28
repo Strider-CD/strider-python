@@ -11,7 +11,7 @@ var VIRTUAL_PIP = path.join(VIRTUAL_ENV_DIR, "bin", "pip")
 
 module.exports = function(ctx, cb) {
 
-  var CREATE_VIRTUAL_ENV = VIRTUAL_ENV_CMD + " && " + VIRTUAL_PIP + " install -r requirements.txt && "
+  var CREATE_VIRTUAL_ENV = VIRTUAL_ENV_CMD + " && " + VIRTUAL_PIP + " install -r requirements.txt"
 
   ctx.addDetectionRule({
     filename:"setup.py",
