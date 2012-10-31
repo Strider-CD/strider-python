@@ -1,0 +1,18 @@
+{
+  "name": "strider-python",
+  "version": "0.0.2",
+  "description": "Python/Pyramid/Django support for Strider Continuous Deployment",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Strider-CD/strider-python.git"
+  },
+  "keywords": [
+    "strider",
+    "python"
+  ],
+  "author": "Niall O'Higgins",
+  "license": "BSD"
+}
