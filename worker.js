@@ -14,15 +14,6 @@ module.exports = function(ctx, cb) {
   var CREATE_VIRTUAL_ENV = VIRTUAL_ENV_CMD + " && " + VIRTUAL_PIP + " install -r requirements.txt"
 
   ctx.addDetectionRule({
-    filename:"setup.py",
-    grep:/pyramid/i,
-    language:"python",
-    framework:"pyramid",
-    prepare:CREATE_VIRTUAL_ENV,
-    test:VIRTUAL_PYTHON + " setup.py test",
-  })
-
-  ctx.addDetectionRule({
     filename:"manage.py",
     grep:/django/i,
     language:"python",
