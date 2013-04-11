@@ -1,6 +1,6 @@
 {
   "name": "strider-python",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Python/Pyramid/Django support for Strider Continuous Deployment",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
