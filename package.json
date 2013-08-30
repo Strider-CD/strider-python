@@ -1,6 +1,6 @@
 {
   "name": "strider-python",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Python/Pyramid/Django support for Strider Continuous Deployment",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +17,8 @@
   "license": "BSD",
   "dependencies": {
     "strider-detection-rules": "0.0.1"
+  },
+  "strider": {
+    "worker": "worker.js"
   }
 }
