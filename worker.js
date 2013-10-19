@@ -9,17 +9,24 @@ module.exports = {
     if (config && config.test !== 'none') {
       test = config.test
     }
+    var defaultPrepare = "pip install -r requirements.txt"
+    var prepare = defaultPrepare
+    if (config && config.prepare) {
+      prepare = config.prepare
+    }
     done(null, {
       path: [path.join(__dirname, 'thirdparty'),
              path.join(venvDir, 'bin')],
       environment: 'virtualenv.py ' + venvDir,
       prepare: function (context, done) {
-        if (fs.existsSync(path.join(context.dataDir, 'requirements.txt'))) {
-          return context.cmd('pip install -r requirements.txt', function (err) {
-            done(err, true)
-          })
+        if (prepare === defaultPrepare && !fs.existsSync(path.join(context.dataDir, 'requirements.txt'))) {
+          // skip if default and no requirements.txt exists
+          // we assume that if you're configuring your own, you'll ensure the file exists
+          return done(null, true)
         }
-        done(null, false)
+        context.cmd(prepare, function (err) {
+          done(err, true)
+        })
       },
       test: test
     })
