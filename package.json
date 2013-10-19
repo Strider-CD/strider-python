@@ -13,6 +13,15 @@
     "strider",
     "python"
   ],
+  "strider": {
+    "type": "job",
+    "id": "python",
+    "title": "Python",
+    "webapp": "webapp.js",
+    "worker":"worker.js",
+    "icon": "icon.png",
+    "config": true
+  },
   "author": "Niall O'Higgins",
   "license": "BSD",
   "dependencies": {
