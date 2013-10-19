@@ -16,7 +16,7 @@ module.exports = {
         }
         done(null, false)
       },
-      test: config.test !== 'none' ? config.test : undefined
+      test: (config && config.test !== 'none') ? config.test : undefined
     })
   },
   autodetect: {
