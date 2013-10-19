@@ -5,6 +5,10 @@ var path = require('path')
 module.exports = {
   init: function (config, job, context, done) {
     var venvDir = path.join(context.baseDir, '.venv')
+    var test = undefined
+    if (config && config.test !== 'none') {
+      test = config.test
+    }
     done(null, {
       path: [path.join(__dirname, 'thirdparty'),
              path.join(venvDir, 'bin')],
@@ -17,7 +21,7 @@ module.exports = {
         }
         done(null, false)
       },
-      test: (config && config.test !== 'none') ? config.test : undefined
+      test: test
     })
   },
   autodetect: {
