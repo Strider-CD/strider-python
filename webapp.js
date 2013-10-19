@@ -9,8 +9,8 @@ module.exports = {
     */
     test: {
       type: String,
-      enum: ['none', 'py.test', './setup.py test', 'make test'],
-      default: 'py.test'
+      enum: ['none', 'py.test', 'python setup.py test', 'make test'],
+      default: 'python setup.py test'
     }
   }
 }
