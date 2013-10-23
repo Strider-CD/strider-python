@@ -3,7 +3,7 @@ var fs = require('fs')
 var path = require('path')
 
 function shellCommand(command) {
-  if (!command.replace(/#[^\n]*/g, '').trim().length) return
+  if (!command || !command.replace(/#[^\n]*/g, '').trim().length) return
   return {
     command: 'sh',
     args: ['-x', '-c', command]
