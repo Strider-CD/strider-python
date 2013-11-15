@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Python/Pyramid/Django support for Strider Continuous Deployment",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint && mocha -R tap"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "id": "python",
     "title": "Python",
     "webapp": "webapp.js",
-    "worker":"worker.js",
+    "worker": "worker.js",
     "icon": "icon.png",
     "config": true
   },
@@ -26,5 +26,10 @@
   "license": "BSD",
   "dependencies": {
     "strider-detection-rules": "0.0.1"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "jshint": "~2.3.0",
+    "mocha": "~1.14.0"
   }
 }
