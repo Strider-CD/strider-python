@@ -32,9 +32,8 @@ module.exports = {
       prepare = shellCommand(config.prepare)
     }
     done(null, {
-      path: [path.join(__dirname, 'thirdparty'),
-             path.join(venvDir, 'bin')],
-      environment: 'virtualenv.py ' + venvDir,
+      path: [path.join(venvDir, 'bin')],
+      environment: 'virtualenv ' + venvDir,
       prepare: prepare,
       test: test
     })
