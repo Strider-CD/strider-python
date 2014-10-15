@@ -1,10 +1,13 @@
-<input type="text" ng-model="config.prepare" />
+<label for="strider-python-prepare">Prepare Command</label>
+<input id="strider-python-prepare" type="text" ng-model="config.prepare" placeholder="pip -r requirements.txt"/>
 <p class="help-text">
-  Select which command should be used to prepare your project. The default is
+  Enter which command should be used to prepare your project. The default is
   "pip -r requirements.txt". For example, this could be "python setup.py
   develop" for some projects.
 </p>
-<select ng-model="config.test">
+
+<label for="strider-python-test">Test Command</label>
+<select id="strider-python-test" ng-model="config.test">
   <option value="python setup.py test">python setup.py test</option>
   <option value="make test">make test</option>
   <option value="py.test">py.test</option>
@@ -12,7 +15,8 @@
 </select>
 <p class="help-text">
   Select which command should be used to test your
-  project. Alternatively, select "none" if you are going to test using
+  project. Alternatively, select "No test command" if you are going to test using
   some other plugin.
 </p>
+
 <button class="btn btn-primary" ng-click="save()">Save</button>
