@@ -1,6 +1,6 @@
 {
   "name": "strider-python",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Python/Pyramid/Django support for Strider Continuous Deployment",
   "scripts": {
     "test": "jshint && mocha -R tap"
