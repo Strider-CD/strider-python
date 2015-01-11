@@ -24,9 +24,6 @@
   },
   "author": "Niall O'Higgins",
   "license": "BSD",
-  "dependencies": {
-    "strider-detection-rules": "0.0.1"
-  },
   "devDependencies": {
     "chai": "~1.8.1",
     "jshint": "~2.3.0",
