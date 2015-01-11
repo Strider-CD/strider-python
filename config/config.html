@@ -1,4 +1,4 @@
-<label for="strider-python-prepare">Prepare Command</label>
+<label for="strider-python-prepare" class="bold-label">Prepare Command</label>
 <input id="strider-python-prepare" type="text" ng-model="config.prepare" placeholder="pip install -r requirements.txt"/>
 <p class="help-text">
   Enter which command should be used to prepare your project. The default is
@@ -6,7 +6,7 @@
   develop" for some projects.
 </p>
 
-<label for="strider-python-test">Test Command</label>
+<label for="strider-python-test" class="bold-label">Test Command</label>
 <select id="strider-python-test" ng-model="config.test">
   <option value="python setup.py test">python setup.py test</option>
   <option value="make test">make test</option>
