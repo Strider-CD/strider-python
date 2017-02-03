@@ -25,8 +25,8 @@
   "author": "Niall O'Higgins",
   "license": "BSD",
   "devDependencies": {
-    "chai": "~1.8.1",
-    "jshint": "~2.3.0",
-    "mocha": "~1.14.0"
+    "chai": "~3.5.0",
+    "jshint": "~2.9.4",
+    "mocha": "~3.2.0"
   }
 }
