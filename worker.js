@@ -17,10 +17,17 @@ function shellCommand(command) {
 module.exports = {
   init: function (config, job, context, done) {
     var venvDir = path.join(context.baseDir, '.venv');
-    var test;
+    var test, runtime;
     
-    if (config && config.test !== 'none') {
-      test = config.test
+    if (config) {
+      if (config.test !== 'none') {
+        test = config.test
+      }
+      if (config.runtime !== 'none') {
+        runtime = config.runtime
+      } else {
+        runtime = '2'
+      }
     }
     
     var defaultPrepare = function (context, done) {
@@ -43,7 +50,7 @@ module.exports = {
     
     done(null, {
       path: [path.join(venvDir, 'bin')],
-      environment: 'virtualenv ' + venvDir,
+      environment: 'virtualenv -p python' + runtime + ' ' + venvDir,
       prepare: prepare,
       test: test
     });

@@ -6,6 +6,12 @@
   develop" for some projects.
 </p>
 
+<label for="strider-python-runtime" class="bold-label">Virtual environment python version</label>
+<input id="strider-python-runtime" type="text" ng-model="config.runtime" placeholder="2"/>
+<p class="help-text">
+  Enter the python version to be used for your project. (eg. 2.7, 3.5 etc.)
+</p>
+
 <label for="strider-python-test" class="bold-label">Test Command</label>
 <select id="strider-python-test" ng-model="config.test">
   <option value="python setup.py test">python setup.py test</option>
