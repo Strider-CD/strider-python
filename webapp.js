@@ -7,7 +7,10 @@ module.exports = {
     },
     test: {
       type: String,
-      enum: ['none', 'py.test', 'python setup.py test', 'make test'],
+      enum: [
+          'none', 'py.test', 'python setup.py test', 'make test',
+          'python manage.py test'
+      ],
       default: 'python setup.py test'
     },
     prepare: {
